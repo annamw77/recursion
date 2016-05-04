@@ -4,6 +4,11 @@ Write a method factorial that accepts an integer parameter n and that uses recur
 
 ## fib(n)
 Write a method fib that accepts an integer n as a parameter and returns the nth fibonacci number.
+fib(4) = 3
+1 1 3 5 8 13
+fib(1) == 1
+fib(2) == 1
+
 
 ## pal(s)
 Write a method pal that accepts a string s as a parameter and returns a boolean value indicating if that string is a palindrome or not.

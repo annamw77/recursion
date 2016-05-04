@@ -1,14 +1,46 @@
-
 def fact(n)
+  if n == 0 || n == 1
+    return 1
+  end
+
+  return n * fact(n-1)
 end
 
 def fib(n)
+  if n == 1 || n == 2
+    return 1
+  end
+
+  return fib(n-1) + fib(n-2)
 end
 
 def pal(s)
+  if s.length == 0 || s.length == 1
+    return true
+  end
+
+  if s.chars[0] == s.chars[s.length-1]
+    s.slice!(0)
+    s.slice!(s.length-1)
+    pal(s)
+  else
+    return false
+  end
 end
 
 def binary(n)
+  binary_helper(n)
+end
+
+def binary_helper(digits, binary="", result="")
+  if digits == 0
+    result += binary + " "
+    return result
+  else
+    result = binary_helper(digits-1,binary+"0", result)
+    result = binary_helper(digits-1,binary+"1", result)
+  end
+  return result
 end
 
 def travel(x,y)
